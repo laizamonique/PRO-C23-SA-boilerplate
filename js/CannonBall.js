@@ -10,15 +10,12 @@ class CannonBall {
   }
 
 
-  display() {
-    var angle = this.body.angle;
+  display() 
+  {
     var pos = this.body.position;
-
     push();
-    translate(pos.x, pos.y);
-    rotate(angle);
     imageMode(CENTER);
-    image(this.image, 0, 0, this.r, this.r);
+    image(this.image, pos.x, pos.y, this.r, this.r);
     pop();
   }
 }
