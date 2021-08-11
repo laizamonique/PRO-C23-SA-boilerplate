@@ -34,18 +34,10 @@ function draw() {
 
   Engine.update(engine);
 
+  rect(ground.position.x, ground.position.y, width * 2, 1);
   push();
-  translate(ground.position.x, ground.position.y);
-  fill("brown");
-  rectMode(CENTER);
-  rect(0, 0, width * 2, 1);
-  pop();
-
-  push();
-  translate(tower.position.x, tower.position.y);
-  rotate(tower.angle);
   imageMode(CENTER);
-  image(towerImage, 0, 0, 160, 310);
+  image(towerImage, tower.position.x, tower.position.y, 160, 310);
   pop();
 
   cannon.display();
